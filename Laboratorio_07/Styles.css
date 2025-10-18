@@ -1,0 +1,52 @@
+
+h1 {
+    color: green;
+}
+p {
+    font-size: italic;
+}
+.Título {
+    color: red;
+    text-align: center;
+    font-size: 24px;
+}
+.caja-estilizada {
+    background-color: yellow;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 15px;
+    width: fit-content;
+}
+#parrafo-unico {
+    color: blue;
+    font-weight: bold;
+    border: 3px solid red;
+    padding: 5px;
+    width: fit-content;
+}
+#boton-grande {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+}
+.borde-gris {
+    border :2px solid gray;
+    background-color: lightgray;
+
+}
+.esquinas-redondeadas {
+    border-radius: 15px;
+}
+.sombra-gris {
+    box-shadow: 5px 5px 15px gray;
+
+}
+.contenedor-general {
+    margin-top: 20px;
+    padding: 15px;
+    width: 80%;
+    min-height: 100px;
+}

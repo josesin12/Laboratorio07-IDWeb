@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Box Model y Flex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .flex-container {
+            /* 1. Usar Flexbox para alinear [cite: 211] */
+            display: flex;
+            /* 2. Distribuir espacio [cite: 212] */
+            justify-content: space-around;
+            padding: 30px;
+            background: #e6ecf3;
+            border: 2px dashed #0b1320; /* Demostración del Box Model en el contenedor */
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        .cajas {
+            /* Aplicar el Modelo de Cajas a cada tarjeta [cite: 209] */
+            width: 200px;
+            text-align: center;
+            /* Espacio interno [cite: 44] */
+            padding: 20px; 
+            /* Borde [cite: 45] */
+            border: 5px solid #007bff; 
+            /* Margen (espacio externo) [cite: 46] */
+            margin: 10px; 
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 4: Tarjetas con Modelo de Cajas y Flexbox</h1>
+        <div class="flex-container">
+            <div class="cajas">
+                <h2>Tarjeta 1</h2>
+                <p>Contenido con padding y borde</p>
+            </div>
+            <div class="cajas">
+                <h2>Tarjeta 2</h2>
+                <p>Usa justify-content: space-around</p>
+            </div>
+            <div class="cajas">
+                <h2>Tarjeta 3</h2>
+                <p>Cada tarjeta tiene margen externo</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

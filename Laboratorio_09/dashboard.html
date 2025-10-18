@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7: Dashboard con Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 1. Usar Grid para el layout principal (sidebar + content) [cite: 228] */
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* Sidebar de 250px y contenido flexible */
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #0b1320;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #f2f6fb;
+        }
+
+        /* 2. Usar Flexbox dentro del contenido para las tarjetas de estadísticas [cite: 229] */
+        .stats-cards {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background-color: #fff;
+            text-align: center;
+            /* Modelo de Cajas en cada tarjeta [cite: 230] */
+            padding: 20px; 
+            border: 1px solid #ddd;
+            margin: 0; /* Flex maneja el espacio con gap */
+            border-radius: 6px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <p>Menú de navegación.</p>
+        </aside>
+        <main class="content">
+            <h1>Panel de Administración</h1>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Ventas</h3>
+                    <p>\$ 628</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Usuarios</h3>
+                    <p>2434</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Likes</h3>
+                    <p>1259</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Ratio</h3>
+                    <p>8,5</p>
+                </div>
+            </div>
+            
+            <div style="background:#fff; padding:20px; border-radius:6px;">Gráficos de ejemplo</div>
+        </main>
+    </div>
+</body>
+</html>

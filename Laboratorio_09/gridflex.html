@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5: Layout de Blog con Grid y Flex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            /* 1. Usar GRID para el layout principal [cite: 216] */
+            display: grid;
+            /* header, nav, main/aside, footer */
+            grid-template-rows: auto auto 1fr auto; 
+            min-height: 100vh;
+        }
+        
+        header, nav, footer {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        header, footer {
+            background: #0b1320;
+            color: #fff;
+        }
+        
+        nav {
+            background: #e6ecf3;
+        }
+
+        /* Área principal que contendrá artículos y aside */
+        main {
+            /* 2. Usar Flexbox para organizar artículos y aside [cite: 217] */
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .articles-container {
+            /* Contenedor Flex para los artículos */
+            display: flex;
+            flex-direction: column;
+            flex: 3; /* Ocupa 3 partes del espacio */
+            gap: 15px;
+        }
+        
+        article {
+            /* Aplicar modelo de cajas [cite: 218] */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            flex-grow: 1; /* Para que ocupen el mismo ancho/alto si están en columna */
+        }
+        
+        aside {
+            flex: 1; /* Ocupa 1 parte del espacio */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Header del Blog (Grid)</header>
+    <nav>Menú de Navegación (Grid)</nav>
+    <main>
+        <div class="articles-container">
+            <article>
+                <h2>Artículo 1</h2>
+                <p>Contenido principal del artículo. Aplicando padding y border (Box Model)[cite: 218].</p>
+            </article>
+            <article>
+                <h2>Artículo 2</h2>
+                <p>Otro artículo de ejemplo. Los artículos están organizados con Flexbox dentro de Main[cite: 217].</p>
+            </article>
+        </div>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Contenido lateral (Grid/Flex Item).</p>
+        </aside>
+    </main>
+    <footer>Footer del Blog (Grid)</footer>
+</body>
+</html>

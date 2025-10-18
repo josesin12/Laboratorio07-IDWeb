@@ -1,0 +1,19 @@
+
+/*
+// Laboratorio Nro 09 Ejercicio 4, 5, 6, 7, 8
+// Autor: Mi Nombre
+// Colaboró: Nombre del colaborador (o IA)
+// Tiempo: 2 horas (Estimado)
+*/
+
+body {
+    font-family: system-ui, sans-serif;
+    color: #0b1320;
+    background: #f2f6fb;
+    margin: 0;
+}
+
+/* Estilos de Contenedor General */
+.container {
+    padding: 20px;
+}
